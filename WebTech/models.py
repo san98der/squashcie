@@ -25,5 +25,5 @@ class Match(models.Model):
 	p2_s2_score = models.IntegerField()
 	p1_s3_score = models.IntegerField()
 	p2_s3_score = models.IntegerField()
-	date = models.Charfield(max_length=30)
+	date = models.CharField(max_length=30)
 	pool = models.ForeignKey(Pool, null=True, on_delete=models.SET_NULL)
