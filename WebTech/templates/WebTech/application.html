@@ -1,0 +1,62 @@
+<html>
+
+ <head>
+   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <link rel= "stylesheet" type="text/css" href="list.css">
+   <link rel= "stylesheet" type="text/css" href="main.css">
+ </head>
+
+ <body>
+   <div id="Page1" class="bg">
+       <div class="container">
+           <span><h3>Intermate Squash Competition</h3></span>
+           <br />
+
+           <div class="row">
+             <div class="col-sm-2">
+               <div class="menu">
+                 <span><nav class="nav-sidebar">
+                     <ul class="nav">
+                         <li class="active"><a href="javascript:;">Sign in</a></li>
+                         <li class="nav-divider"></li>
+                         <li><a href="javascript:;" onclick="return show('Page1','Page2');">Home</a></li>
+                         <li><a href="javascript:;">Matches</a></li>
+                         <div id="" class="sub-menu" style="display:none">
+
+                         </div>
+                         <li><a href="javascript:;">Ranking</a></li>
+                         <li><a href="https://venusp.tue.nl/sci-cgi/index.opl" target="_blank">SSCE</a></li>
+                         <li class="nav-divider"></li>
+                         <li><a href="javascript:;">Application</a></li>
+                         <li class="nav-divider"></li>
+                     </ul>
+                 </nav></span>
+               </div>
+             </div>
+               <div class="col-sm-10">
+
+                   <form method="POST" action="http://formspree.io/s.nelle.jelle@live.nl">
+                       <input type="hidden" name="_cc" value="san98der@hotmail.com,evietoss@live.nl" />
+                       <input type="text" name="_gotcha" style="display:none" />
+                       <input type="hidden" name="_next" value="thank_you.html" />
+                       <input type="text" name="firstname" placeholder="First Name"><br>
+                       <input type="text" name="surname" placeholder="Surname"><br>
+                       <input type="text" name="phonenumber" placeholder="Phonenumber"><br>
+                       <input type="email" name="email" placeholder="Your email"><br>
+                       Have you played in our competition before?<br>
+                       <input type="radio" name="played" value="yes"> Yes<br>
+                       <input type="radio" name="played" value="no" /> No<br>
+                       <button type="submit">Send</button><br>
+                   </form>
+
+
+               </div>
+           </div>
+       </div>
+   </div>
+ </body>
+
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="script.js"></script>
+</html>

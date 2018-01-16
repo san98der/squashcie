@@ -1,0 +1,53 @@
+.list{
+  width: 100%;
+  margin:0 auto;
+}
+
+.list ol{
+  counter-reset: li;
+  list-style: none;
+  *list-style: decimal;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin-bottom: 4em;
+}
+
+.list ol ol{
+  margin: 0 0 0 2em;
+}
+
+.list a{
+  position: relative;
+  display: block;
+  padding: .4em .4em .4em 2em;
+  *padding: .4em;
+  margin: .75em 0;
+  background: #FDBF42;
+  color: #000000;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+.list a:hover{
+  background: #d6d4d4;
+  text-decoration:none;
+  transform: scale(1.1);
+}
+
+.list a:before{
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 63%;
+  margin-top: -1.6em;
+  background:#FDBF42;
+  height: 2.6em;
+  width: 2.6em;
+  line-height: 2.1em;
+  border: .3em solid #000000;
+  text-align: center;
+  font-weight: bold;
+  color:#000000;
+}
