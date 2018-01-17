@@ -25,8 +25,8 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 	url(r'^$', views.main_page, name='main_page'),
-    url(r'^matches/$', views.main_page, name='matches_page'),
-    url(r'^ranking/$', views.main_page, name='ranking_page'),
-    url(r'^results/$', views.main_page, name='results_page'),
-    url(r'^thank_you/$', views.main_page, name='thank_you_page'),
+    url(r'^matches/$', views.matches_page, name='matches_page'),
+    url(r'^ranking/$', views.ranking_page, name='ranking_page'),
+    url(r'^results/$', views.results_page, name='results_page'),
+    url(r'^thank_you/$', views.thank_you_page, name='thank_you_page'),
 ]
