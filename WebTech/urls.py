@@ -27,4 +27,5 @@ urlpatterns = [
 	url(r'^$', views.main_page, name='main_page'),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^sign_in/$', views.sign_in, name='sign_in'),
 ]
