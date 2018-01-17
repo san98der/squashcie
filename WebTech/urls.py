@@ -16,13 +16,13 @@ Including another URLconf
 from django.contrib import admin
 
 from django.conf import settings
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.conf.urls.static import static
 
 from . import views
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)), 
+    url(r'^admin/', include(admin.site.urls)),
 	url(r'^$', views.main_page, name='main_page'),
     url(r'^matches/$', views.matches_page, name='matches_page'),
     url(r'^ranking/$', views.ranking_page, name='ranking_page'),
