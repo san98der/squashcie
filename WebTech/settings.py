@@ -27,7 +27,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['squashcie.pythonanywhere.com']
 
-LOGIN_REDIRECT_URL = '/'
 
 
 # Application definition
