@@ -25,7 +25,7 @@ SECRET_KEY = 'iopi3sj+hdtkuzhe0ly!u!-*uhvmqlq$y*l!rr+z2w*7%1hqph'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['squashcie.pythonanywhere.com']
 
 
 # Application definition
