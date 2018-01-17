@@ -24,6 +24,4 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 	url(r'^$', views.main_page, name='main_page'),
-    url(r'^accounts/login/$', views.login, name='login'),
-    url(r'^accounts/logout/$', views.logout, name='logout', kwargs={'next_page': '/'}),
 ]
