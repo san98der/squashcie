@@ -23,9 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'iopi3sj+hdtkuzhe0ly!u!-*uhvmqlq$y*l!rr+z2w*7%1hqph'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['squashcie.pythonanywhere.com']
+
+LOGIN_REDIRECT_URL = '/'
 
 
 # Application definition

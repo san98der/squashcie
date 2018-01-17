@@ -1,0 +1,75 @@
+{% load staticfiles %}
+
+<html>
+
+  <head>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel= "stylesheet" type="text/css" href="{% static 'css/list.css' %}">
+    <link rel= "stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <title>The Squashcie</title>
+  </head>
+
+  <body>
+    <div id="Page1" class="bg">
+      <div class="container">
+      	<span><h3>Intermate Squash Competition</h3></span>
+          <br />
+
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="menu">
+                <nav class="nav-sidebar">
+                    <ul class="nav">
+                        <li class="active"><a href="javascript:;">
+                            {% if user.is_authenticated %}
+                                <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                            {% else %}
+                                <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+                            {% endif %}
+                        </a></li>
+                        <li class="nav-divider"></li>
+                        <li><a href="javascript:;" onclick="return show('Page1','Page2');">Home</a></li>
+                        <li><a href="javascript:;">Matches</a></li>
+                        <div id="" class="sub-menu" style="display:none">
+
+                        </div>
+                        <li><a href="javascript:;">Ranking</a></li>
+                        <li><a href="https://venusp.tue.nl/sci-cgi/index.opl" target="_blank">SSCE</a></li>
+                        <li class="nav-divider"></li>
+                        <li><a href="javascript:;">Application</a></li>
+                        <li class="nav-divider"></li>
+                    </ul>
+                </nav>
+              </div>
+            </div>
+              <div class="col-sm-10">
+                  {% if form.errors %}
+                      <p>Your username and password didn't match. Please try again.</p>
+                  {% endif %}
+
+                  <form method="post" action="{% url 'login' %}">
+                  {% csrf_token %}
+                      <table>
+                      <tr>
+                          <td>{{ form.username.label_tag }}</td>
+                          <td>{{ form.username }}</td>
+                      </tr>
+                      <tr>
+                          <td>{{ form.password.label_tag }}</td>
+                          <td>{{ form.password }}</td>
+                      </tr>
+                      </table>
+
+                      <input type="submit" value="login" />
+                      <input type="hidden" name="next" value="{{ next }}" />
+                  </form>
+              </div>
+          </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+</html>
