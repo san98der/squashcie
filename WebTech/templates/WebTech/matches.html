@@ -20,7 +20,7 @@
                       <ul class="nav">
                           <li><a href="javascript:;">Sign in</a></li>
                           <li class="nav-divider"></li>
-                          <li><a href="javascript:;" onclick="return show('Page1','Page2');">Home</a></li>
+                          <li><a href="javascript:;">Home</a></li>
                           <li class="active"><a href="javascript:;">Matches</a></li>
                           <div id="" class="sub-menu" style="display:none">
 
@@ -56,6 +56,21 @@
                                 <li>player_name</li>
                                 {% endfor % }
                               </ul>
+                              <button onclick="resultButton()">Fill in result</button>
+                              <div id="fillScore">
+                                <input type="number" name="Set 1: Player 1" min="0" max="30">
+                                <input type="submit"><br>
+                                <input type="number" name="Set 1: Player 2" min="0" max="30">
+                                <input type="submit"><br>
+                                <input type="number" name="Set 2: Player 1" min="0" max="30">
+                                <input type="submit"><br>
+                                <input type="number" name="Set 2: Player 2" min="0" max="30">
+                                <input type="submit"><br>
+                                <input type="number" name="Set 3: Player 1" min="0" max="30">
+                                <input type="submit"><br>
+                                <input type="number" name="Set 3: Player 2" min="0" max="30">
+                                <input type="submit"><br>
+                              </div>
                                 <link><a href= "upcoming_matches.html">Upcoming Matches</a></link>
                                 <link><a href= "results.html">Results</a></link>
                             </div>
@@ -71,4 +86,5 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
+  <script src="fill_results.js"></script>
 </html>

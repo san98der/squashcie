@@ -20,10 +20,10 @@
               <div class="menu">
                 <nav class="nav-sidebar">
                     <ul class="nav">
-                        <li><a href="sign_in.html">Sign in</a></li>
+                        <li><a href="javascript:;">Sign in</a></li>
                         <li class="nav-divider"></li>
-                        <li class="active"><a href="javascript:;" onclick="return show('Page1','Page2');">Home</a></li>
-                        <li><a href="javascript:;">Matches</a></li>
+                        <li class="active"><a href="javascript:;">Home</a></li>
+                        <li><a href="{% url 'WebTech:matches' %}">Matches</a></li>
                         <div id="" class="sub-menu" style="display:none">
 
                         </div>
@@ -48,5 +48,5 @@
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="{% static 'js/script.js' %}"></script>
+  <script src="script.js"></script>
 </html>
