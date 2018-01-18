@@ -1,5 +1,10 @@
 import operator
 
+from Django import template
+
+register = template.Library()
+
+@register.filter(name='rank')
 def rank(Pool):
 	players = Player.objects.get(pool = Pool)
 	players = sorted(players, key=operator.attrgetter('points_scored')

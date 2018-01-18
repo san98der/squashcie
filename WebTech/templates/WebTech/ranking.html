@@ -1,5 +1,7 @@
 <html>
 
+  {% load ranking %}
+
  <head>
    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
    <link rel= "stylesheet" type="text/css" href="list.css">
@@ -51,7 +53,7 @@
                        </div>
                        <div id="collapse1" class="panel-collapse collapse in">
                            <div class="panel-body">
-                               ranking in the pool per person
+                               {{ pool|ranking }}
                            </div>
                        </div>
                      </div>
